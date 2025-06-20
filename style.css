@@ -1,1 +1,232 @@
-/* Style moved to external file. Paste full CSS here manually for now. */
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #ffffff;
+      text-align: center;
+    }
+    .banner {
+      background: #000;
+      padding: 20px 0 10px;
+      position: relative;
+    }
+    .title {
+      position: relative;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 2.4em;
+      font-weight: 700;
+      color: white;
+    }
+    .social-icons {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    .social-icon {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: scale(1.15);
+      filter: brightness(0) invert(1);
+    }
+    .monkey-banner {
+      height: 250px;
+      background: url('banner.png') center/cover no-repeat;
+      margin: 10px auto;
+    }
+    .nav {
+      background: #FFD100;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 0;
+    }
+    .nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #000;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+    .nav a:hover {
+      transform: scale(1.05);
+      color: #000;
+    }
+    .content {
+      padding: 40px 20px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .info-card {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: left;
+      color: #fff;
+      transition: transform 0.3s ease, opacity 0.6s ease;
+      display: block;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .info-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .info-card-content {
+      padding: 20px;
+    }
+    .info-card-title {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .info-card-description {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    .info-card-meta {
+      font-size: 0.8em;
+      color: #888;
+    }
+    .footer {
+      background: #FFD100;
+      padding: 40px 0;
+      color: #000;
+    }
+    .footer h3 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    .footer-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .footer-nav a:hover {
+      transform: scale(1.05);
+      color: #000;
+    }
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    .footer-icon {
+      width: 18px;
+      height: 18px;
+      transition: all 0.3s ease;
+    }
+    .footer-icon:hover {
+      transform: scale(1.15);
+      filter: none;
+    }
+    .footer p {
+      margin: 5px 0 0;
+      font-size: 0.8em;
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .card-grid {
+        gap: 20px;
+      }
+      .footer {
+        padding: 25px 0;
+      }
+      .monkey-banner {
+        height: 160px;
+      }
+      .info-card-content {
+        padding: 15px;
+      }
+      .info-card-title {
+        font-size: 1.05em;
+      }
+      .info-card-description {
+        font-size: 0.9em;
+      }
+      .info-card-meta {
+        font-size: 0.75em;
+      }
+      .banner {
+        padding: 20px 10px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-icons {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+      .title h1 {
+        font-size: 1.6em;
+      }
+      .nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .content {
+        padding: 20px 10px;
+      }
+      .footer h3 {
+        font-size: 1em;
+      }
+      .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    
+    .info-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .info-card:hover {
+      transform: scale(1.03);
+    }
+      .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #FFD100;
+      color: #000;
+      padding: 8px 16px;
+      z-index: 100;
+      font-weight: 600;
+      text-decoration: none;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+  

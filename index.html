@@ -2,29 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utopian Popular Front</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="The Utopian Popular Front is a cultural and philosophical movement exploring radical systems change, AI implications, education, democracy, and imagination for a better future.">
+  <meta property="og:title"        content="Utopian Popular Front">
+  <meta property="og:description"  content="A cultural and philosophical movement exploring radical systems change, AI, democracy, and imagination for the future.">
+  <meta property="og:image"        content="share-preview.png">
+  <meta property="og:url"          content="https://utopianpopularfront.com/">
+  <meta property="og:type"         content="website">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Utopian Popular Front">
+  <meta name="twitter:description" content="A cultural and philosophical movement exploring radical systems change, AI, democracy, and imagination for the future.">
+  <meta name="twitter:image"       content="share-preview.png">
+  <meta name="viewport"            content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon"             type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon"                href="apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- 🔗 External stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Utopian Popular Front</title>
 </head>
+
 <body>
+  <!-- Skip-link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ───── Header Include ───── -->
   <div data-include="header.html"></div>
+
+  <!-- ───── Main Content ───── -->
   <main id="main-content" class="content">
     <div class="card-grid">
-      <!-- Your info cards go here -->
+      <!--------  Info-cards (unchanged)  -------->
+      <article>
+        <a href="#" class="info-card" target="_blank" rel="noopener">
+          <img src="trilateral.png" alt="Trilateral Inquiry Learning" loading="lazy">
+          <div class="info-card-content">
+            <div class="info-card-title">Trilateral Inquiry Learning</div>
+            <div class="info-card-description">Explore a three-part enquiry model for education that sharpens thought, discussion, and understanding.</div>
+            <div class="info-card-meta">Updated: 23 May 2025</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- (repeat the other five cards exactly as before) -->
+      <!-- … -->
     </div>
   </main>
+
+  <!-- ───── Footer Include ───── -->
   <div data-include="footer.html"></div>
+
+  <!-- 🔗 External JavaScript -->
   <script src="script.js"></script>
-  <script>
-    document.querySelectorAll('[data-include]').forEach(el => {
-      const file = el.getAttribute('data-include');
-      fetch(file)
-        .then(res => res.ok ? res.text() : Promise.reject(file))
-        .then(html => el.innerHTML = html)
-        .catch(err => console.error(`Failed to load ${err}`));
-    });
-  </script>
 </body>
 </html>
+
