@@ -1,73 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPEBB3LFV3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VPEBB3LFV3');
-</script>
-
   <meta charset="UTF-8">
-  <meta name="description" content="The Utopian Popular Front is a cultural and philosophical movement exploring radical systems change, AI implications, education, democracy, and imagination for a better future.">
-  <meta property="og:title" content="Utopian Popular Front">
-  <meta property="og:description" content="A cultural and philosophical movement exploring radical systems change, AI, democracy, and imagination for the future.">
-  <meta property="og:image" content="share-preview.png">
-  <meta property="og:url" content="https://utopianpopularfront.com/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Utopian Popular Front">
-  <meta name="twitter:description" content="A cultural and philosophical movement exploring radical systems change, AI, democracy, and imagination for the future.">
-  <meta name="twitter:image" content="share-preview.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Utopian Popular Front</title>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Header and Footer will be injected here -->
   <div data-include="header.html"></div>
-
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="#" aria-label="Go to homepage">HOME</a>
-    <a href="#" aria-label="More information about the Utopian Popular Front">INFORMATION</a>
-    <a href="#" aria-label="About the Utopian Popular Front">ABOUT</a>
-    <a href="#" aria-label="Contact the Utopian Popular Front">CONTACT</a>
-  </nav>
-
   <main id="main-content" class="content">
     <div class="card-grid">
-      <!-- Cards inserted dynamically or statically here -->
+      <!-- Your info cards go here -->
     </div>
   </main>
-
   <div data-include="footer.html"></div>
-
-  <!-- Main JS for loading header/footer and animations -->
-  <script src="main.js"></script>
-
-<script>
-  document.querySelectorAll('[data-include]').forEach(el => {
-    const file = el.getAttribute('data-include');
-    fetch(file)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load ${file}`);
-        return res.text();
-      })
-      .then(html => el.innerHTML = html)
-      .catch(err => console.error(err));
-  });
-</script>
-
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('[data-include]').forEach(el => {
+      const file = el.getAttribute('data-include');
+      fetch(file)
+        .then(res => res.ok ? res.text() : Promise.reject(file))
+        .then(html => el.innerHTML = html)
+        .catch(err => console.error(`Failed to load ${err}`));
+    });
+  </script>
 </body>
 </html>
-
