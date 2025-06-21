@@ -41,7 +41,7 @@
     }
     .monkey-banner {
       height: 250px;
-      background: url('banner.png') center/cover no-repeat;
+      background: url('banner.webp') center/cover no-repeat;
       margin: 10px auto;
     }
     .nav {
