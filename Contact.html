@@ -45,23 +45,24 @@
   
 <main id="main-content" class="content">
 
-<section class="section">
-  <h1>Contact</h1>
-  <p>If you’d like to get in touch, send a message below. We’ll get back to you as soon as we can.</p>
-</section>
+<main class="info-doc-container">
+  <h1 class="info-doc-title">Contact</h1>
 
-<form class="contact-form" action="https://formspree.io/f/{your_form_id}" method="POST">
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required>
+  <p class="info-doc-paragraph">For more information about the Utopian Popular Front please read our manifesto below...</p>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="_replyto" required>
+  <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="6" required></textarea>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" placeholder="Your email" required>
 
-  <button type="submit">Send Message</button>
-</form>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</main>
 
 </main>
 

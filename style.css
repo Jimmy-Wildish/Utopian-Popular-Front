@@ -294,15 +294,6 @@
 
 
 
-.contact-form {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #111;
-  border-radius: 12px;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .contact-form label {
   display: block;
   font-weight: 600;
@@ -345,11 +336,3 @@
 .contact-form button:hover {
   transform: scale(1.03);
 }
-
-.section {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  text-align: center;
-  color: white;
-}
-  
