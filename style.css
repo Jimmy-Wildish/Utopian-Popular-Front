@@ -244,6 +244,14 @@
   margin-bottom: 2rem;
 }
 
+.info-doc-title-subline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 .info-doc-subtitle {
   font-size: 1.6rem;
   font-weight: bold;
